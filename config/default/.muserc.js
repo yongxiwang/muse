@@ -3,7 +3,7 @@ module.exports = {
   vue: false, // 是否支持vue，如开启vue，则自动开启babel
   react: false, // 是否开启react支持，如开启，则自动开启babel
 
-  lang: 'js', // 暂时只支持[js,jsx]
+  lang: 'js', // 支持[js, jsx, ts]
 
   watch: true, // 默认使用watch port模式
   devMode: 'port', // [sock, port]
@@ -16,7 +16,7 @@ module.exports = {
 
 
   buildDist: 'dist/${app_system}/dev', // build模式输出目录
-  deployDist: 'src/${app_system}/online', // deploy模式输出目录
+  deployDist: 'dist/${app_system}/online', // deploy模式输出目录
 
   eslint: true, // muse 接管eslint检测
   stylelint: true, // muse 接管stylelint检测
@@ -55,4 +55,5 @@ module.exports = {
   pagePath: '${page}/index', // 目录规则
 
   devPublicPath: '', // 多级目录watch问题
+  deployPublicPath: '/' // deploy时的publicPath
 }
